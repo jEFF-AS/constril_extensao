@@ -1,0 +1,36 @@
+.black-text {
+    color: black;
+}
+
+.orange-text {
+    color: #ff9800; /* Cor padrão do Materialize para laranja */
+}
+
+.grey-text {
+    color: grey;
+}
+
+.input-field {
+    margin-top: 20px;
+    width: 100%;
+}
+
+button {
+    font-size: calc(1em + 0.5vw); /* Ajusta o tamanho da fonte com base na largura da viewport */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e68a00; /* Laranja mais escuro ao passar o mouse */
+}
+
+.comprar-btn {
+    width: 45%; /* O botão ocupará toda a largura em telas menores */
+    max-width: 200px; /* Defina um limite máximo de largura */
+}
+
+@media (min-width: 600px) {
+    .comprar-btn {
+        width: 45%; /* Defina a largura original em telas maiores */
+    }
+}
