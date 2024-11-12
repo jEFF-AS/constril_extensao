@@ -16,8 +16,12 @@
 }
 
 button {
-    font-size: calc(1em + 0.5vw); /* Ajusta o tamanho da fonte com base na largura da viewport */
+    font-size: calc(0.9em + 0.6vw); /* Ajuste o tamanho da fonte com base na largura da viewport */
     transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Mantém o espaçamento interno */
 }
 
 button:hover {
@@ -26,11 +30,13 @@ button:hover {
 
 .comprar-btn {
     width: 45%; /* O botão ocupará toda a largura em telas menores */
-    max-width: 200px; /* Defina um limite máximo de largura */
+    max-width: 250px; /* Defina um limite máximo de largura */
+    height: auto; /* Adapta a altura automaticamente */
 }
 
 @media (min-width: 600px) {
     .comprar-btn {
-        width: 45%; /* Defina a largura original em telas maiores */
+        width: 45%; /* Define a largura em telas maiores */
     }
 }
+

@@ -2,6 +2,26 @@
 @section('title', 'Carrinho')
 @section('conteudo')
 
+<style>
+/* Estilos para tornar os botões quadrados e responsivos */
+.div a.btn, .div button#finalizarPedido {
+    width: 100%;
+    max-width: 200px; /* Limite máximo de largura para botões em telas maiores */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    display: inline-block;
+    margin: 5px; /* Espaço entre os botões */
+    border-radius: 3px; /* Remove o arredondamento para um efeito quadrado */
+}
+
+@media (min-width: 600px) {
+    /* Estilos para dispositivos maiores */
+    .div a.btn, .div button#finalizarPedido {
+        width: 30%; /* Cada botão ocupa um terço da largura em telas maiores */
+    }
+}
+</style>
+
     <div class="row container">
 
         @if ($mensagem = Session::get('sucesso'))
@@ -77,7 +97,7 @@
 
         <br>
         <div class="div center">
-            <a href="{{ route('site.index') }}" class="btn waves-effect waves-light blue"> Continuar comprando</a>
+            <a href="{{ route('site.index') }}" class="btn waves-effect waves-light blue"> Comprar Mais</a>
             <a href="{{ route('site.limparcarrinho') }}" class="btn waves-effect waves-light orange"> Limpar carrinho</a>
             <button id="finalizarPedido" class="btn waves-effect waves-light green">Finalizar pedido</button>
         </div>

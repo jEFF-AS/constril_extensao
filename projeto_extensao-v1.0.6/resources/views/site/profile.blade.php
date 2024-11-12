@@ -1,6 +1,21 @@
 @extends('site.layout')
 @section('title', 'profile')
 @section('conteudo')
+
+<style>
+    /* Deixar os botões quadrados */
+    .btn-square {
+        border-radius: 3px;
+    }
+
+    /* Adicionar espaçamento entre os botões */
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Espaço entre os botões */
+    }
+</style>
+
 <div class="container">
     <h2>Perfil do Usuário</h2>
 
@@ -37,11 +52,12 @@
             <input type="password" name="password" id="password">
         </div>
 
-        <button type="submit" class="btn green">Atualizar Perfil</button>
+        <!-- Agrupamento de botões com classes para estilo -->
+        <div class="button-group">
+            <button type="submit" class="btn green btn-square">Atualizar Perfil</button>
+            <button type="button" class="btn red btn-square modal-trigger" data-target="confirmDeleteModal">Excluir Conta</button>
+        </div>
     </form><br>
-
-    <!-- Botão para abrir o modal de exclusão -->
-    <button class="btn red modal-trigger" data-target="confirmDeleteModal">Excluir Conta</button>
 
     <!-- Modal de confirmação de exclusão -->
     <div id="confirmDeleteModal" class="modal">
@@ -53,8 +69,8 @@
             <form action="{{ route('profile.delete') }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn red">Sim, excluir</button>
-                <a href="#!" class="modal-close btn blue">Cancelar</a>
+                <button type="submit" class="btn red btn-square">Sim, excluir</button>
+                <a href="#!" class="modal-close btn blue btn-square">Cancelar</a>
             </form>
         </div>
     </div>
@@ -67,4 +83,5 @@
         M.Modal.init(elems);
     });
 </script>
+
 @endsection

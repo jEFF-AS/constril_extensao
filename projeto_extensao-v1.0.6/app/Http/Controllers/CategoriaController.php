@@ -9,7 +9,7 @@ class CategoriaController extends Controller
 {
     public function index()
     {
-        $categorias = Categoria::all();
+        $categorias = Categoria::paginate(10);
         return view('admin.categorias.index', compact('categorias'));
     }
 

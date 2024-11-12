@@ -28,7 +28,7 @@
             <a href="#" class="center brand-logo"><h5>Constril</h5></a>
             <ul class="right">
                 <li class="hide-on-med-and-down"><a href="#" onclick="fullScreen()"><i class="material-icons">settings_overscan</i></a></li>
-                <li><a href="#" class="dropdown-trigger" data-target='dropdown2'>Olá {{ ucfirst(auth()->user()->firstName) }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li class="hide-on-med-and-down"><a href="#" class="dropdown-trigger" data-target='dropdown2'>Olá {{ ucfirst(auth()->user()->firstName) }}<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large"><i class="material-icons">menu</i></a>
         </div>
@@ -56,6 +56,7 @@
         @can('access')
             <li><a class="btn grey lighten-3 waves-effect sidenav-menu-btn" href="{{ route('admin.usuarios') }}"><i class="material-icons left">people</i>Usuários</a></li>
         @endcan
+        <li><a class="btn grey lighten-3 waves-effect sidenav-menu-btn" href="{{ route('profile') }}"><i class="material-icons left">person</i>Perfil</a></li>
         <li class="sair-botao"><a class="btn grey lighten-3 waves-effect sidenav-menu-btn" href="{{ route('login.logout') }}"><i class="material-icons left">logout</i>Sair</a></li>
     </ul>
     
