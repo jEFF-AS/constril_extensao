@@ -1,0 +1,23 @@
+/* Deixar os botões quadrados */
+.btn-square {
+    border-radius: 3px;
+    width: 200px; /* Defina uma largura fixa para os botões */
+}
+
+.btn {
+    border-radius: 3px;
+}
+
+/* Adicionar espaçamento entre os botões */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Ajuste para dispositivos menores */
+@media (max-width: 600px) {
+    .btn-square {
+        width: 55%; /* Torna os botões responsivos em telas pequenas */
+    }
+}

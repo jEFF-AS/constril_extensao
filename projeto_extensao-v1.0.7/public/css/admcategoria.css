@@ -1,0 +1,35 @@
+/* Tamanho de fonte e espaçamento responsivos para células da tabela */
+.table-responsive table tbody td {
+    font-size: calc(0.85em + 0.3vw); /* Diminui o tamanho da fonte */
+    padding: 0.6em 1em; /* Ajusta o padding para um espaçamento mais discreto */
+    word-wrap: break-word; /* Quebra o texto longo */
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 600px) {
+    .table-responsive table tbody td {
+        font-size: calc(0.8em + 0.2vw); /* Fonte ainda menor em telas pequenas */
+        padding: 0.4em; /* Reduz padding em dispositivos móveis */
+    }
+
+    /* Adiciona espaçamento entre os botões nas telas pequenas */
+    .table-responsive table tbody td form button {
+        margin-top: 5px; /* Adiciona espaço entre os botões */
+        width: 100%; /* Torna os botões com largura 100% */
+    }
+
+    .table-responsive table tbody td a {
+        margin-bottom: 5px; /* Espaço entre o botão de editar e excluir */
+        width: 100%; /* Torna o botão de editar com largura 100% */
+    }
+}
+
+/* Ajuste para telas médias (tablets) */
+@media (min-width: 601px) {
+    /* Adiciona espaço entre os botões nas telas médias */
+    .table-responsive table tbody td form button,
+    .table-responsive table tbody td a {
+        margin-top: 10px; /* Adiciona mais espaço entre os botões */
+        width: 65%; /* Ajusta para que os botões não ocupem 100% da largura */
+    }
+}
