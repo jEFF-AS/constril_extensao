@@ -44,7 +44,7 @@
                         <td>{{ $categoria->descricao }}</td>
                         <td>
                             <a href="{{ route('categorias.edit', $categoria->id) }}" class="btn orange">Editar</a>
-                            <form action="{{ route('categorias.destroy', $categoria->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('categorias.destroy', $categoria->id) }}" method="POST" style="display:inline;" onsubmit="return confirmDelete()">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn red">Excluir</button>
@@ -61,5 +61,11 @@
         {{ $categorias->links('custom.pagination') }}
     </div>
 </div>
+
+<script>
+    function confirmDelete() {
+        return confirm('Tem certeza de que deseja excluir esta categoria?');
+    }
+</script>
 
 @endsection

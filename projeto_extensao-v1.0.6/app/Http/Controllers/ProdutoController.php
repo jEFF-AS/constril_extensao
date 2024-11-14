@@ -16,7 +16,6 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        // return "index";
 
         $produtos = Produto::with('categoria')->paginate(10); // Carrega a categoria junto com os produtos
         $categorias = Categoria::all();

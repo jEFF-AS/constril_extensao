@@ -2,19 +2,7 @@
 @section('title', 'profile')
 @section('conteudo')
 
-<style>
-    /* Deixar os botões quadrados */
-    .btn-square {
-        border-radius: 3px;
-    }
-
-    /* Adicionar espaçamento entre os botões */
-    .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; /* Espaço entre os botões */
-    }
-</style>
+<link rel="stylesheet" href="{{ asset('css/profile.css') }}">
 
 <div class="container">
     <h2>Perfil do Usuário</h2>
@@ -69,8 +57,8 @@
             <form action="{{ route('profile.delete') }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn red btn-square">Sim, excluir</button>
-                <a href="#!" class="modal-close btn blue btn-square">Cancelar</a>
+                <button type="submit" class="btn red btn">Sim, excluir</button>
+                <a href="#!" class="modal-close btn grey btn">Cancelar</a>
             </form>
         </div>
     </div>

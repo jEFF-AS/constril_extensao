@@ -2,25 +2,28 @@
 @section('title', 'Carrinho')
 @section('conteudo')
 
-<style>
-/* Estilos para tornar os botões quadrados e responsivos */
-.div a.btn, .div button#finalizarPedido {
-    width: 100%;
-    max-width: 200px; /* Limite máximo de largura para botões em telas maiores */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    display: inline-block;
-    margin: 5px; /* Espaço entre os botões */
-    border-radius: 3px; /* Remove o arredondamento para um efeito quadrado */
-}
+    <style>
+        /* Estilos para tornar os botões quadrados e responsivos */
+        .div a.btn,
+        .div button#finalizarPedido {
+            width: 100%;
+            max-width: 200px; /* Limite máximo de largura para botões em telas maiores */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            display: inline-block;
+            margin: 5px; /* Espaço entre os botões */
+            border-radius: 3px; /* Remove o arredondamento para um efeito quadrado */
+        }
 
-@media (min-width: 600px) {
-    /* Estilos para dispositivos maiores */
-    .div a.btn, .div button#finalizarPedido {
-        width: 30%; /* Cada botão ocupa um terço da largura em telas maiores */
-    }
-}
-</style>
+        @media (min-width: 600px) {
+
+            /* Estilos para dispositivos maiores */
+            .div a.btn,
+            .div button#finalizarPedido {
+                width: 30%; /* Cada botão ocupa um terço da largura em telas maiores */
+            }
+        }
+    </style>
 
     <div class="row container">
 
@@ -66,7 +69,8 @@
                     @foreach ($itens as $item)
                         <br>
                         <tr>
-                            <td><img src="{{ $item->attributes->image }}" alt="" width="70" class="responsive-img circle"></td>
+                            <td><img src="{{ $item->attributes->image }}" alt="" width="70"
+                                    class="responsive-img circle"></td>
                             <td>{{ $item->name }}</td>
                             <td>R$ {{ number_format($item->price, 2, ',', '.') }}</td>
 
@@ -99,7 +103,12 @@
         <div class="div center">
             <a href="{{ route('site.index') }}" class="btn waves-effect waves-light blue"> Comprar Mais</a>
             <a href="{{ route('site.limparcarrinho') }}" class="btn waves-effect waves-light orange"> Limpar carrinho</a>
-            <button id="finalizarPedido" class="btn waves-effect waves-light green">Finalizar pedido</button>
+
+            @if ($itens->count() > 0)
+                <button id="finalizarPedido" class="btn waves-effect waves-light green">Finalizar pedido</button>
+            @else
+                <button id="finalizarPedido" class="btn waves-effect waves-light green" disabled>Finalizar pedido</button>
+            @endif
         </div>
     </div>
 

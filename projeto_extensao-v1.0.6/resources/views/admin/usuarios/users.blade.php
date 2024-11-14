@@ -68,7 +68,7 @@
                                         @method('DELETE')
                                         <button type="submit" class="waves-effect waves-red btn red">Excluir</button>
                                     </form>
-                                    <a href="#!" class="modal-close waves-effect waves-green btn blue">Cancelar</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn grey">Cancelar</a>
                                 </div>
                             </div>
                         </td>

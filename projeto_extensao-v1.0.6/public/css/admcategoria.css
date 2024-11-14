@@ -30,6 +30,6 @@
     .table-responsive table tbody td form button,
     .table-responsive table tbody td a {
         margin-top: 10px; /* Adiciona mais espaço entre os botões */
-        width: 80%; /* Ajusta para que os botões não ocupem 100% da largura */
+        width: 65%; /* Ajusta para que os botões não ocupem 100% da largura */
     }
 }
