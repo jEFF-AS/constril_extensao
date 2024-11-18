@@ -4,6 +4,13 @@
     "description": "Desenvolvendo um site com o banco de dados.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Jéferson A. Santos",
+            "email": "jeferson.ptu119@gmail.com",
+            "role": "Desenvolvedor"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "darryldecode/cart": "^4.2",
