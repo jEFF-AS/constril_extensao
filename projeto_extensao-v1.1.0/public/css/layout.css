@@ -1,0 +1,46 @@
+/* Estilo para o rodapé fixo */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #e0e0e0;
+    padding: 10px 0;
+    color: #424242;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+/* Estilos personalizados para dropdowns */
+.dropdown-content {
+    background-color: #f5f5f5; /* Fundo claro e neutro */
+    border-radius: 8px; /* Bordas arredondadas para um toque moderno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.dropdown-content li > a {
+    color: #424242 !important; /* Texto cinza escuro, removendo o azul */
+    padding: 12px 20px; /* Maior espaçamento para um design mais espaçoso */
+    font-weight: 500; /* Negrito suave */
+    text-transform: capitalize;
+}
+
+.dropdown-content li > a:hover {
+    background-color: #e0e0e0; /* Fundo mais escuro no hover */
+    color: #000000 !important; /* Texto preto no hover */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    border-radius: 8px;
+}
+
+.dropdown-content li:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0; /* Linha divisória para separar os itens */
+}
