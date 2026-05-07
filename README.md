@@ -1,6 +1,6 @@
 ## E-Commerce de Materiais de Construção
 
-#### Projeto desenvolvido como extensão universitária para um E-Commerce completo de materiais de construção. O site permite que clientes naveguem por produtos, adicionem ao carrinho, realizem cadastro/login e finalizem compras de forma intuitiva e segura.
+#### Projeto desenvolvido como extensão acadêmico para um E-Commerce completo de materiais de construção. O site permite que clientes naveguem por produtos, adicionem ao carrinho, realizem cadastro/login e finalizem compras de forma intuitiva e segura.
 
 ## 🛠️ Tecnologias Utilizadas
 Backend: PHP 8+ + Laravel 10
