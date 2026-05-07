@@ -3,10 +3,10 @@
 #### Projeto desenvolvido como extensão acadêmico para um E-Commerce completo de materiais de construção. O site permite que clientes naveguem por produtos, adicionem ao carrinho, realizem cadastro/login e finalizem compras de forma intuitiva e segura.
 
 ## 🛠️ Tecnologias Utilizadas
-Backend: PHP 8+ + Laravel 10
-Banco de Dados: MySQL 8.0
-Frontend: HTML5, CSS3, Bootstrap 5, JavaScript
-Outras: Composer, Artisan, Blade Templates
+- Backend: PHP 8+ + Laravel 10
+- Banco de Dados: MySQL 8.0
+- Frontend: HTML5, CSS3, Bootstrap 5, JavaScript
+- Outras: Composer, Artisan, Blade Templates
 
 ## ✨ Funcionalidades
 * ✅ Cadastro e Login de Usuários
